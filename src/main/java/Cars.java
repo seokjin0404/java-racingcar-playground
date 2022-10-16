@@ -23,7 +23,11 @@ public class Cars {
         return cars.size();
     }
     public List<Integer> getPositions() {
-        return move(Arrays.asList(0,0,0));
+        List<Integer> positions = new ArrayList<Integer>();
+        for (int i=0; i<getSize();i++) {
+            positions.add(cars.get(i).getPosition());
+        }
+        return positions;
     }
     public List<Integer> move(List<Integer> randomNumbers) {
         List<Integer> positions = new ArrayList<Integer>();
@@ -32,5 +36,8 @@ public class Cars {
             positions.add(cars.get(i).getPosition());
         }
         return positions;
+    }
+    public Car getCar(int i) {
+        return cars.get(i);
     }
 }
