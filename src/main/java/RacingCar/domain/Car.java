@@ -1,7 +1,12 @@
 package RacingCar.domain;
 
 public class Car {
-    public boolean move() {
-        return true;
+    private Position position;
+
+    public Car() {
+        position = new Position(0);
+    }
+    public Position move() {
+        return position.move();
     }
 }

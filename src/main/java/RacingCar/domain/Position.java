@@ -7,4 +7,16 @@ public class Position {
             throw new IllegalArgumentException();
         this.position = position;
     }
+
+    public Position move() {
+        this.position += 1;
+        return this;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null|| getClass() != o.getClass()) return false;
+        Position other = (Position)o;
+        return position == other.position;
+    }
 }
