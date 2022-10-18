@@ -20,4 +20,14 @@ public class Car {
     public Position move() {
         return position.move();
     }
+
+    public Position update(Position maxDistance) {
+        if (position.furtherThan(maxDistance))
+            return new Position(position);
+        return maxDistance;
+    }
+
+    public boolean same(Position distance) {
+        return position.equals(distance);
+    }
 }

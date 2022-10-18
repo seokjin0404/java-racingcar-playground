@@ -8,6 +8,10 @@ public class Position {
         this.position = position;
     }
 
+    public Position(Position position) {
+        this.position = position.position;
+    }
+
     public Position move() {
         this.position += 1;
         return this;
@@ -18,5 +22,9 @@ public class Position {
         if (o == null|| getClass() != o.getClass()) return false;
         Position other = (Position)o;
         return position == other.position;
+    }
+
+    public boolean furtherThan(Position maxDistance) {
+        return position > maxDistance.position;
     }
 }
