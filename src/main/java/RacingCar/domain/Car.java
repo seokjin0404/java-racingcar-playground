@@ -5,7 +5,7 @@ public class Car {
     private Name name;
 
     public Car() {
-        this("no name", 0);
+        this("NO", 0);
     }
 
     public Car(String name) {
@@ -29,5 +29,14 @@ public class Car {
 
     public boolean same(Position distance) {
         return position.equals(distance);
+    }
+
+    public Position move(int randomNumber) {
+        if (randomNumber >= 4)
+            return position.move();
+        return position;
+    }
+    public String getName() {
+        return name.getName();
     }
 }

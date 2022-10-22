@@ -28,4 +28,17 @@ public class Cars {
         }
         return maxDistance;
     }
+
+    public List<Position> move(List<Integer> randomNumbers) {
+        List<Position> positions = new ArrayList<>();
+        for (int i=0; i<cars.size(); i++) {
+            Car car = cars.get(i);
+            positions.add(car.move(randomNumbers.get(i)));
+        }
+        return positions;
+    }
+
+    public int size() {
+        return cars.size();
+    }
 }

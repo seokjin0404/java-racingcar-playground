@@ -27,4 +27,7 @@ public class Position {
     public boolean furtherThan(Position maxDistance) {
         return position > maxDistance.position;
     }
+    public int getPosition() {
+        return position;
+    }
 }
